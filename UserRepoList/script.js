@@ -19,16 +19,14 @@ function displayResults(responseJson) {
 
 function getRepos(username){
     const params = {
-    username: username,
-  };
-
-  await octokit.request('GET /users/{username}/repos', {
+      await octokit.request('GET /users/{username}/repos', {
   username: 'username'
-  });
+    });
+  };
 
   console.log(username)
 
-  fetch(url, options)
+  fetch(username)
     .then(response => {
       if (response.ok) {
         return response.json();
